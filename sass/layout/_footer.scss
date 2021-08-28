@@ -1,0 +1,79 @@
+.footer {
+  background-color: $color-grey-black;
+  padding: 10rem 0;
+  font-size: 1.4rem;
+  color: $color-grey-light-1;
+
+  @include respond(tab-port) {
+    padding: 6rem 0;
+  }
+
+  &__logo-box {
+    text-align: center;
+    margin-bottom: 8rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__logo {
+    width: 15rem;
+    height: auto;
+  }
+
+  &__navigation {
+    border-top: 2px solid $color-grey-dark-hard;
+    padding-top: 1.5rem;
+    display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      background-color: $color-grey-black;
+      color: $color-grey-light-1;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.2s;
+      backface-visibility: hidden;
+    }
+
+    &:active,
+    &:hover {
+      color: $color-primary;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.8);
+      transform: rotate(5deg) scale(1.2);
+    }
+  }
+
+  &__copyright {
+    color: inherit;
+    border-top: 2px solid $color-grey-dark-hard;
+    padding-top: 1.5rem;
+    width: 80%;
+    float: right;
+    @include respond(tab-port) {
+      width: 100%;
+      float: none;
+    }
+  }
+}
